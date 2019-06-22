@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Scalar</string>
+
+    <!-- Login Strings -->
+    <string name="create_wallet">Create New Wallet</string>
+    <string name="import_wallet">Import Wallet</string>
+    <string name="description_wallet">A Simple Grin wallet for your enjoyment</string>
+</resources>
