@@ -1,8 +1,20 @@
 <resources>
     <string name="app_name">Scalar</string>
 
-    <!-- Login Strings -->
+    <!-- Login -->
     <string name="create_wallet">Create New Wallet</string>
     <string name="import_wallet">Import Wallet</string>
     <string name="description_wallet">A Simple Grin wallet for your enjoyment</string>
+
+    <!-- Create Account -->
+    <string name="create_account_title">Grin Account Creation</string>
+    <string name="create_account_intro">We\'re so glad you are a believer of Grin. Electronic
+        transactions for all. Without censorship or restrictions.\n\nTo create a wallet, you will
+        generate a secret seed and a password. They will let you interact with the Grin blockchain.
+        \n\nNote we only temporarily store your wallet information, please make sure to back up your
+        wallet information.
+    </string>
+    <string name="ready">I\'m ready</string>
+
+
 </resources>
