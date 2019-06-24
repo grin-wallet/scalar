@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import com.scalar.scalar.BaseActivity
 import com.scalar.scalar.R
+import com.scalar.scalar.creation.CreateAccountActivity
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : BaseActivity() {

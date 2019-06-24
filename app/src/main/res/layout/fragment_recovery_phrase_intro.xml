@@ -4,25 +4,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".creation.CreateAccountActivity">
+    tools:context=".creation.RecoveryPhraseIntroFragment">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/create_account_title"
+        android:text="@string/recovery_phrase_title"
         style="@style/ActivityTitle" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/create_account_intro"
+        android:text="@string/recovery_phrase_description"
         style="@style/ParagraphText" />
 
     <Button
-        android:id="@+id/createWalletButton"
+        android:id="@+id/startRecoveryPhraseButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/ready"
+        android:text="@string/start"
         style="@style/PrimaryButton" />
 
 </LinearLayout>
