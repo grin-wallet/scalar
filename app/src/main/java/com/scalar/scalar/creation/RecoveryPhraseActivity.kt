@@ -2,30 +2,26 @@ package com.scalar.scalar.creation
 
 import android.os.Bundle
 import android.widget.FrameLayout
+import android.widget.Toast
 import com.scalar.scalar.BaseActivity
 import com.scalar.scalar.R
 
-class RecoveryPhraseActivity : BaseActivity(), RecoveryPhraseIntroFragment.OnFragmentInteractionListener {
+class RecoveryPhraseActivity : BaseActivity(), RecoveryPhraseIntroFragment.OnPhraseIntroInteractionListener, PhraseFragment.OnPhraseFragmentInteractionListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recovery_phrase)
 
-        // Check that the activity is using the layout version with
-        // the fragment_container FrameLayout
         if (findViewById<FrameLayout>(R.id.fragment_container) != null) {
 
-            // If we're being restored from a previous state,
-            // then we don't need to do anything and should return or else
-            // we could end up with overlapping fragments.
+            // If we're being restored from a previous state, then we don't need to do anything
+            // and should return or else we could end up with overlapping fragments.
             if (savedInstanceState != null) {
                 return
             }
 
-            // Create a new Fragment to be placed in the activity layout
             val introFragment = RecoveryPhraseIntroFragment.newInstance()
 
-            // Add the fragment to the 'fragment_container' FrameLayout
             supportFragmentManager.beginTransaction()
                     .add(R.id.fragment_container, introFragment).commit()
         }
@@ -34,11 +30,17 @@ class RecoveryPhraseActivity : BaseActivity(), RecoveryPhraseIntroFragment.OnFra
     override fun onButtonClicked() {
         // TODO: Actually add the PhraseFragment
         // Create a new Fragment to be placed in the activity layout
-        val phraseFragment = RecoveryPhraseIntroFragment.newInstance()
+        val phraseFragment = PhraseFragment.newInstance()
 
         // Add the fragment to the 'fragment_container' FrameLayout
         supportFragmentManager.beginTransaction()
-                .add(R.id.fragment_container, phraseFragment).commit()
+                .replace(R.id.fragment_container, phraseFragment)
+                .addToBackStack("hello")
+                .commit()
+    }
+
+    override fun onPhraseButtonClicked() {
+       Toast.makeText(this, "hi", Toast.LENGTH_LONG).show()
     }
 
 }

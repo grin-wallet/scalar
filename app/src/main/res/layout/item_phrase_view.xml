@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="8dp"
+    android:background="@drawable/background_item_phrase_view"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/numberItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_small"
+        android:textColor="@color/grey"
+        android:text="1" />
+
+    <TextView
+        android:id="@+id/wordItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/numberItem"
+        android:layout_marginLeft="8dp"
+        android:text="grin"
+        android:textSize="@dimen/text_size_medium"
+        android:textColor="@color/colorPrimaryDark" />
+
+</RelativeLayout>

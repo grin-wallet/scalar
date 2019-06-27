@@ -2,41 +2,42 @@ package com.scalar.scalar.creation
 
 import android.content.Context
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-
+import androidx.fragment.app.Fragment
 import com.scalar.scalar.R
-import kotlinx.android.synthetic.main.fragment_recovery_phrase_intro.view.*
+import kotlinx.android.synthetic.main.fragment_phrase.view.*
 
 /**
  * A simple [Fragment] subclass.
  * Activities that contain this fragment must implement the
- * [RecoveryPhraseIntroFragment.OnPhraseIntroInteractionListener] interface
+ * [PhraseFragment.OnPhraseFragmentInteractionListener] interface
  * to handle interaction events.
- * Use the [RecoveryPhraseIntroFragment.newInstance] factory method to
+ * Use the [PhraseFragment.newInstance] factory method to
  * create an instance of this fragment.
  *
  */
-class RecoveryPhraseIntroFragment : Fragment() {
-    private var listener: OnPhraseIntroInteractionListener? = null
+class PhraseFragment : Fragment() {
+    private var listener: OnPhraseFragmentInteractionListener? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        val rootView = inflater.inflate(R.layout.fragment_recovery_phrase_intro, container, false)
+        val rootView = inflater.inflate(R.layout.fragment_phrase, container, false)
 
-        rootView.startRecoveryPhraseButton.setOnClickListener {
-            listener?.onButtonClicked()
+        rootView.nextButton.setOnClickListener {
+            listener?.onPhraseButtonClicked()
         }
+
+        rootView.phraseView.loadMnemonic(getPhrase())
 
         return rootView
     }
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        if (context is OnPhraseIntroInteractionListener) {
+        if (context is OnPhraseFragmentInteractionListener) {
             listener = context
         } else {
             throw RuntimeException("$context must implement OnPhraseIntroInteractionListener")
@@ -59,8 +60,8 @@ class RecoveryPhraseIntroFragment : Fragment() {
      * (http://developer.android.com/training/basics/fragments/communicating.html)
      * for more information.
      */
-    interface OnPhraseIntroInteractionListener {
-        fun onButtonClicked()
+    interface OnPhraseFragmentInteractionListener {
+        fun onPhraseButtonClicked()
     }
 
     companion object {
@@ -68,10 +69,16 @@ class RecoveryPhraseIntroFragment : Fragment() {
          * Use this factory method to create a new instance of
          * this fragment.
          *
-         * @return A new instance of fragment RecoveryPhraseIntroFragment.
+         * @return A new instance of fragment PhraseFragment.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
-        fun newInstance() = RecoveryPhraseIntroFragment()
+        fun newInstance() = PhraseFragment()
     }
+
+    private fun getPhrase(): List<String> {
+        return listOf("burger", "king", "pizza", "coin", "dollar", "log", "google", "facebook",
+                "amazon", "learn", "eat", "sleep", "brush", "laugh", "pray")
+    }
+
 }

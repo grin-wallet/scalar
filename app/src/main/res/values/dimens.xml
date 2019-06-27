@@ -6,4 +6,8 @@
     <dimen name="margin">24dp</dimen>
     <dimen name="padding">24dp</dimen>
 
+    <!--Common-->
+    <dimen name="common_radius">5dp</dimen>
+    <dimen name="common_stroke">1dp</dimen>
+
 </resources>
