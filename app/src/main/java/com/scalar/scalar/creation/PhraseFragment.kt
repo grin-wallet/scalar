@@ -71,9 +71,10 @@ class PhraseFragment : Fragment() {
          *
          * @return A new instance of fragment PhraseFragment.
          */
-        // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance() = PhraseFragment()
+
+        val TAG = "PHRASE_FRAGMENT"
     }
 
     private fun getPhrase(): List<String> {

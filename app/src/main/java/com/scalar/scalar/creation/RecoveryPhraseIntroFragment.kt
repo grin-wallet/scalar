@@ -70,7 +70,6 @@ class RecoveryPhraseIntroFragment : Fragment() {
          *
          * @return A new instance of fragment RecoveryPhraseIntroFragment.
          */
-        // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance() = RecoveryPhraseIntroFragment()
     }

@@ -28,19 +28,17 @@ class RecoveryPhraseActivity : BaseActivity(), RecoveryPhraseIntroFragment.OnPhr
     }
 
     override fun onButtonClicked() {
-        // TODO: Actually add the PhraseFragment
-        // Create a new Fragment to be placed in the activity layout
         val phraseFragment = PhraseFragment.newInstance()
 
         // Add the fragment to the 'fragment_container' FrameLayout
         supportFragmentManager.beginTransaction()
                 .replace(R.id.fragment_container, phraseFragment)
-                .addToBackStack("hello")
+                .addToBackStack(PhraseFragment.TAG)
                 .commit()
     }
 
     override fun onPhraseButtonClicked() {
-       Toast.makeText(this, "hi", Toast.LENGTH_LONG).show()
+       Toast.makeText(this, "bitcoin is the best!", Toast.LENGTH_LONG).show()
     }
 
 }
