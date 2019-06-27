@@ -16,7 +16,7 @@
 Scalar is a private Grin wallet that allows you to easily create or access an account 
 with a recovery phrase. Currently, the state of sending transactions is a major headache.
 We are working hard to make sending and receiving transations in a single action,
-with requiring that the other user is there (Auto-receive).
+with Auto-receive.
 
 ## Features
 
@@ -29,9 +29,9 @@ A few of the things the wallet will support:
 
 ## Feedback
 
-Feel free to send us feedback by
+Feel free to send us feedback by [filing an issue](https://github.com/block-equity/stellar-android-wallet/issues/new). 
 <!-- on [Twitter](https://twitter.com/TODO:Twitter handle) or  -->
-[filing an issue](https://github.com/block-equity/stellar-android-wallet/issues/new). 
+
 
 <!-- Feature requests are always welcome. If you wish to contribute, please take a quick look at the [guidelines](./CONTRIBUTING.md)!
 
