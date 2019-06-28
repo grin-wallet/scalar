@@ -15,7 +15,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Please carefully write down the following words in the right order."
+        android:text="@string/recovery_phrase_info_text"
         style="@style/ParagraphText" />
 
 
@@ -28,7 +28,7 @@
         android:id="@+id/nextButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="I have written it down"
+        android:text="@string/written_down_text"
         style="@style/PrimaryButton" />
 
 </LinearLayout>

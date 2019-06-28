@@ -20,9 +20,12 @@
         a pen and paper ready so you can write it down. Screenshots or digitally saved phrases
         are easier to be hacked.
     </string>
+    <string name="recovery_phrase_info_text">Please carefully write down the following words in the right order.</string>
+    <string name="written_down_text">I have written it down</string>
 
     <!-- Common Button Strings -->
     <string name="ready">I\'m ready</string>
     <string name="start">Start</string>
+
 
 </resources>
