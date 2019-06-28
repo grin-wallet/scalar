@@ -6,7 +6,10 @@ import android.widget.Toast
 import com.scalar.scalar.BaseActivity
 import com.scalar.scalar.R
 
-class RecoveryPhraseActivity : BaseActivity(), RecoveryPhraseIntroFragment.OnPhraseIntroInteractionListener, PhraseFragment.OnPhraseFragmentInteractionListener {
+class RecoveryPhraseActivity : BaseActivity(),
+        RecoveryPhraseIntroFragment.OnPhraseIntroInteractionListener,
+        PhraseFragment.OnPhraseFragmentInteractionListener,
+        CreateReadyFragment.OnCreateReadyFragmentInteractionListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,7 +41,16 @@ class RecoveryPhraseActivity : BaseActivity(), RecoveryPhraseIntroFragment.OnPhr
     }
 
     override fun onPhraseButtonClicked() {
-       Toast.makeText(this, "bitcoin is the best!", Toast.LENGTH_LONG).show()
+        val createReadyFragment = CreateReadyFragment.newInstance()
+
+        supportFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, createReadyFragment)
+                .addToBackStack(CreateReadyFragment.TAG)
+                .commit()
+    }
+
+    override fun onCreateReadyFragmentInteraction() {
+        Toast.makeText(this, "bitcoin is the best!", Toast.LENGTH_LONG).show()
     }
 
 }

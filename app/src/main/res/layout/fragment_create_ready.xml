@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorAccent"
+    android:paddingTop="@dimen/padding"
+    tools:context=".creation.CreateReadyFragment">
+
+    <ImageView
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_margin="@dimen/margin"
+        android:src="@drawable/ic_check_circle_black_24dp"
+        android:contentDescription="@string/check_mark" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/wallet_ready_text"
+        style="@style/ActivityTitle" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/wallet_intro_text"
+        style="@style/ParagraphText" />
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/next"
+        style="@style/AlternatePrimaryButton" />
+
+</LinearLayout>

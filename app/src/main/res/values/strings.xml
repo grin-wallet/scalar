@@ -22,10 +22,21 @@
     </string>
     <string name="recovery_phrase_info_text">Please carefully write down the following words in the right order.</string>
     <string name="written_down_text">I have written it down</string>
+    <string name="wallet_intro_text">Gringotts, the wizard bank! Ain\'t no safer place. Not one. Except perhaps Hogwarts.\n\nHagrid said it best, so we\'ll leave it at that.</string>
+    <string name="wallet_ready_text">Your wallet is ready</string>
 
     <!-- Common Button Strings -->
     <string name="ready">I\'m ready</string>
     <string name="start">Start</string>
+    <string name="next">Next</string>
+
+
+
+
+
+
+    <!-- Content Descriptors -->
+    <string name="check_mark">Check mark</string>
 
 
 </resources>
