@@ -9,20 +9,34 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
+        android:text="@string/import_title"
         style="@style/ActivityTitle" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
+        android:text="@string/explain_import_text"
         style="@style/ParagraphText" />
+
+    <EditText
+        android:id="@+id/phraseEditText"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:digits="@string/recovery_phrase_alphabet"
+        android:inputType="textFilter"
+        style="@style/ParagraphText"
+        android:background="@drawable/text_input_background"
+        android:padding="@dimen/padding"
+        android:textSize="@dimen/text_size_medium"
+        android:gravity="top"
+        android:textCursorDrawable="@drawable/cursor"/>
 
     <Button
         android:id="@+id/createWalletButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text=""
+        android:text="@string/import_text"
         style="@style/PrimaryButton" />
 
 </LinearLayout>

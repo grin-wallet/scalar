@@ -5,6 +5,7 @@ import android.os.Bundle
 import com.scalar.scalar.BaseActivity
 import com.scalar.scalar.R
 import com.scalar.scalar.creation.CreateAccountActivity
+import com.scalar.scalar.importwallet.ImportActivity
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : BaseActivity() {
@@ -18,7 +19,7 @@ class LoginActivity : BaseActivity() {
         }
 
         importWalletButton.setOnClickListener {
-            // TODO: Start ImportActivity
+            startActivity(Intent(this, ImportActivity::class.java))
         }
     }
 }
