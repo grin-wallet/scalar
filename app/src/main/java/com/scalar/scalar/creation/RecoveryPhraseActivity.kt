@@ -1,10 +1,12 @@
 package com.scalar.scalar.creation
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.FrameLayout
 import android.widget.Toast
 import com.scalar.scalar.BaseActivity
 import com.scalar.scalar.R
+import com.scalar.scalar.home.HomeActivity
 
 class RecoveryPhraseActivity : BaseActivity(),
         RecoveryPhraseIntroFragment.OnPhraseIntroInteractionListener,
@@ -50,7 +52,7 @@ class RecoveryPhraseActivity : BaseActivity(),
     }
 
     override fun onCreateReadyFragmentInteraction() {
-        Toast.makeText(this, "bitcoin is the best!", Toast.LENGTH_LONG).show()
+        startActivity(Intent(this, HomeActivity::class.java))
     }
 
 }

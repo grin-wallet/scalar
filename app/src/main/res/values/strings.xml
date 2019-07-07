@@ -25,6 +25,21 @@
     <string name="wallet_intro_text">Gringotts, the wizard bank! Ain\'t no safer place. Not one. Except perhaps Hogwarts.\n\nHagrid said it best, so we\'ll leave it at that.</string>
     <string name="wallet_ready_text">Your wallet is ready</string>
 
+
+    <!-- Import Account-->
+    <string name="import_title">Enter your recovery phrase</string>
+    <string name="explain_import_text">Please enter your 15 word recovery phrase to import your wallet.</string>
+    <string name="import_text">Import</string>
+    <string name="recovery_phrase_alphabet">abcdefghijklmnopqrstuvwxyz\u0020</string>
+
+    <!-- Home Screen -->
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="empty_transactions_list">Looks like nothing\'s here</string>
+
+
     <!-- Common Button Strings -->
     <string name="ready">I\'m ready</string>
     <string name="start">Start</string>
@@ -33,13 +48,6 @@
 
     <!-- Content Descriptors -->
     <string name="check_mark">Check mark</string>
-
-
-
-    <!-- Import Account-->
-    <string name="import_title">Enter your recovery phrase</string>
-    <string name="explain_import_text">Please enter your 15 word recovery phrase to import your wallet.</string>
-    <string name="import_text">Import</string>
-    <string name="recovery_phrase_alphabet">abcdefghijklmnopqrstuvwxyz\u0020</string>
+    <string name="logo_description">Scalar</string>
 
 </resources>
