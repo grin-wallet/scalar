@@ -6,6 +6,8 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:textViewStyle">@style/TextViewStyle</item>
     </style>
 
     <!-- Primary Button Style -->
@@ -41,9 +43,16 @@
 
     <!-- Text -->
 
-    <style name="ParagraphText">
+    <style name="TextViewStyle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:font">@font/inter_regular</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="RegularTextView">
         <item name="android:layout_margin">@dimen/margin</item>
         <item name="android:textSize">18sp</item>
+        <item name="android:font">@font/inter_regular</item>
         <item name="android:textColor">@color/black</item>
     </style>
 
