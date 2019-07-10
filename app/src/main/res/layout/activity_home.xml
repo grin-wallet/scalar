@@ -9,10 +9,12 @@
     tools:context=".home.HomeActivity">
 
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/home_appbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <Toolbar
+            android:id="@+id/home_toolbar"
             android:layout_width="match_parent"
             android:layout_height="@dimen/toolbar_height">
 
@@ -34,32 +36,26 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <LinearLayout
+        android:id="@+id/walletBalanceLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_below="@+id/home_appbar">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Account"
-            android:layout_margin="@dimen/activity_vertical_margin" />
+            android:text="1230.34"
+            style="@style/WalletAmount"
+            android:layout_marginTop="@dimen/activity_vertical_margin" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="1230.34 Grins"
-            android:layout_margin="@dimen/activity_vertical_margin" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="$3230.34"
-            android:layout_margin="@dimen/activity_vertical_margin" />
-
-        <!--<androidx.recyclerview.widget.RecyclerView-->
-            <!--android:id="@+id/walletRecyclerView"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content" />-->
+            android:text="$3230.34 TODAY"
+            style="@style/ParagraphText"
+            android:layout_margin="0dp"/>
 
     </LinearLayout>
 
@@ -75,6 +71,13 @@
     <!--<ImageView-->
         <!--android:layout_width="wrap_content"-->
         <!--android:layout_height="wrap_content" />-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/transactionsRecyclerView"
+        android:layout_below="@+id/walletBalanceLayout"
+        android:layout_above="@+id/nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView

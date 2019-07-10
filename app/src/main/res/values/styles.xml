@@ -32,6 +32,12 @@
         <item name="android:layout_margin">@dimen/margin</item>
     </style>
 
+    <style name="WalletAmount">
+        <item name="android:textSize">@dimen/amount_title</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:layout_margin">@dimen/margin</item>
+    </style>
+
 
     <!-- Text -->
 
