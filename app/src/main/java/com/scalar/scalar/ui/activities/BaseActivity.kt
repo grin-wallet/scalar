@@ -1,4 +1,4 @@
-package com.scalar.scalar
+package com.scalar.scalar.ui.activities
 
 import androidx.appcompat.app.AppCompatActivity
 

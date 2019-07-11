@@ -1,4 +1,4 @@
-package com.scalar.scalar.creation
+package com.scalar.scalar.ui.creation
 
 import android.content.Context
 import android.os.Bundle

@@ -1,12 +1,11 @@
-package com.scalar.scalar.creation
+package com.scalar.scalar.ui.creation
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.FrameLayout
-import android.widget.Toast
-import com.scalar.scalar.BaseActivity
+import com.scalar.scalar.ui.activities.BaseActivity
 import com.scalar.scalar.R
-import com.scalar.scalar.home.HomeActivity
+import com.scalar.scalar.ui.home.HomeActivity
 
 class RecoveryPhraseActivity : BaseActivity(),
         RecoveryPhraseIntroFragment.OnPhraseIntroInteractionListener,

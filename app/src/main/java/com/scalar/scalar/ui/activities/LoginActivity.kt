@@ -1,11 +1,10 @@
-package com.scalar.scalar.activities
+package com.scalar.scalar.ui.activities
 
 import android.content.Intent
 import android.os.Bundle
-import com.scalar.scalar.BaseActivity
 import com.scalar.scalar.R
-import com.scalar.scalar.creation.CreateAccountActivity
-import com.scalar.scalar.importwallet.ImportActivity
+import com.scalar.scalar.ui.creation.CreateAccountActivity
+import com.scalar.scalar.ui.importwallet.ImportActivity
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : BaseActivity() {

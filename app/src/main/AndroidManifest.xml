@@ -9,13 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ui.receive.ReceiveActivity"></activity>
         <activity
-            android:name=".home.HomeActivity"
-            android:label="@string/title_activity_home"></activity>
-        <activity android:name=".importwallet.ImportActivity" />
-        <activity android:name=".creation.RecoveryPhraseActivity" />
-        <activity android:name=".creation.CreateAccountActivity" />
-        <activity android:name=".activities.LoginActivity">
+            android:name=".ui.home.HomeActivity"
+            android:label="@string/title_activity_home" />
+        <activity android:name=".ui.importwallet.ImportActivity" />
+        <activity android:name=".ui.creation.RecoveryPhraseActivity" />
+        <activity android:name=".ui.creation.CreateAccountActivity" />
+        <activity android:name=".ui.activities.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
