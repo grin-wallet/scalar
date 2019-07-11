@@ -11,9 +11,9 @@
     </style>
 
     <!-- Primary Button Style -->
-    <style name="PrimaryButton" parent="Widget.AppCompat.Button.Borderless">
+    <style name="PrimaryButton" parent="Widget.MaterialComponents.Button.UnelevatedButton">
         <item name="android:textSize">20sp</item>
-        <item name="android:textColor">@color/black</item>
+        <item name="android:textColor">@color/white</item>
         <item name="android:padding">20dp</item>
         <item name="android:foreground">?android:attr/selectableItemBackground</item>
         <item name="android:background">@color/colorAccent</item>
@@ -31,6 +31,12 @@
         <item name="android:textSize">@dimen/title</item>
         <item name="android:textColor">@color/black</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:layout_margin">@dimen/margin</item>
+    </style>
+
+    <style name="WalletAmount">
+        <item name="android:textSize">@dimen/amount_title</item>
+        <item name="android:textColor">@color/dark_grey</item>
         <item name="android:layout_margin">@dimen/margin</item>
     </style>
 

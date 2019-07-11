@@ -2,13 +2,14 @@
 <resources>
     <color name="colorPrimary">#FFFF</color>
     <color name="colorPrimaryDark">@color/black</color>
-    <color name="colorAccent">@color/yellow</color>
+    <color name="colorAccent">@color/blue</color>
 
     <color name="yellow">#FFDD57</color>
     <color name="black">#000</color>
     <color name="white">#FFF</color>
     <color name="blue">#3E7FEF</color>
     <color name="light_grey">#EAEBEC</color>
+    <color name="dark_grey">#393F45</color>
     <color name="grey">#A1A1A1</color>
     <color name="green">#71CD5C</color>
     <color name="red">#EE7A70</color>
