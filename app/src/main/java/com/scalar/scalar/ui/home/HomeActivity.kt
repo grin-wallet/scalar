@@ -1,9 +1,9 @@
-package com.scalar.scalar.home
+package com.scalar.scalar.ui.home
 
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.scalar.scalar.BaseActivity
+import com.scalar.scalar.ui.activities.BaseActivity
 import com.scalar.scalar.R
 import com.scalar.scalar.adapters.TransactionsAdapter
 import com.scalar.scalar.models.TransactionModel

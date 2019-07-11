@@ -10,12 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".home.HomeActivity"
+            android:name="com.scalar.scalar.ui.home.HomeActivity"
             android:label="@string/title_activity_home"></activity>
-        <activity android:name=".importwallet.ImportActivity" />
-        <activity android:name=".creation.RecoveryPhraseActivity" />
-        <activity android:name=".creation.CreateAccountActivity" />
-        <activity android:name=".activities.LoginActivity">
+        <activity android:name="com.scalar.scalar.ui.importwallet.ImportActivity" />
+        <activity android:name="com.scalar.scalar.ui.creation.RecoveryPhraseActivity" />
+        <activity android:name="com.scalar.scalar.ui.creation.CreateAccountActivity" />
+        <activity android:name="com.scalar.scalar.ui.activities.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

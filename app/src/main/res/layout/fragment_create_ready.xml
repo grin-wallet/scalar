@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:background="@color/colorAccent"
     android:paddingTop="@dimen/padding"
-    tools:context=".creation.CreateReadyFragment">
+    tools:context=".ui.creation.CreateReadyFragment">
 
     <ImageView
         android:layout_width="96dp"
