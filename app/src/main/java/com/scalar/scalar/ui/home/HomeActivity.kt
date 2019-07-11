@@ -6,13 +6,13 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.scalar.scalar.ui.activities.BaseActivity
 import com.scalar.scalar.R
 import com.scalar.scalar.adapters.TransactionsAdapter
-import com.scalar.scalar.models.TransactionModel
+import com.scalar.scalar.models.TxnListViewModel
 import com.scalar.scalar.models.TransactionType
 import kotlinx.android.synthetic.main.activity_home.*
 
 class HomeActivity : BaseActivity() {
 
-    lateinit var mTransactions : ArrayList<TransactionModel>
+    lateinit var mTransactions : ArrayList<TxnListViewModel>
 
     private val onNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
@@ -45,7 +45,7 @@ class HomeActivity : BaseActivity() {
 
     }
 
-    private fun getTransactions() : ArrayList<TransactionModel> {
+    private fun getTransactions() : ArrayList<TxnListViewModel> {
         return if (this::mTransactions.isInitialized) {
             mTransactions
         } else {
@@ -54,11 +54,11 @@ class HomeActivity : BaseActivity() {
         }
     }
 
-    private fun loadData() : ArrayList<TransactionModel> {
+    private fun loadData() : ArrayList<TxnListViewModel> {
         // TODO: Make a call to Rust
-        val txns = arrayListOf<TransactionModel>()
+        val txns = arrayListOf<TxnListViewModel>()
         for (i in 0..9) {
-            val txn = TransactionModel(TransactionType.RECEIVED, "Sept 1, 2019", "21.00")
+            val txn = TxnListViewModel(TransactionType.RECEIVED, "Sept 1, 2019", "21.00")
             txns.add(txn)
         }
         return txns

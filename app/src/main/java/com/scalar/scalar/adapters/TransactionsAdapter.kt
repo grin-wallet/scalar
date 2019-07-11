@@ -7,11 +7,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.scalar.scalar.R
-import com.scalar.scalar.models.TransactionModel
+import com.scalar.scalar.models.TxnListViewModel
 import kotlinx.android.synthetic.main.item_transaction.view.*
 
 
-class TransactionsAdapter(val mTransactions : List<TransactionModel>, val mContext : Context):
+class TransactionsAdapter(val mTransactions : List<TxnListViewModel>, val mContext : Context):
         RecyclerView.Adapter<TransactionsAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
