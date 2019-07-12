@@ -12,7 +12,7 @@
         android:text="Receive"
         style="@style/TitleText"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/uploadFileButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
