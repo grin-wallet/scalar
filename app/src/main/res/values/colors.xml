@@ -13,5 +13,6 @@
     <color name="grey">#A1A1A1</color>
     <color name="green">#71CD5C</color>
     <color name="red">#EE7A70</color>
+    <color name="background_white">#E5E5E5</color>
 
 </resources>
