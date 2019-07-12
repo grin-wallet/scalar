@@ -11,7 +11,7 @@ import com.scalar.scalar.models.TxnListViewModel
 import kotlinx.android.synthetic.main.item_transaction.view.*
 
 
-class TransactionsAdapter(val mTransactions : List<TxnListViewModel>, val mContext : Context):
+class TransactionsAdapter(val mTransactions : ArrayList<TxnListViewModel>, val mContext : Context):
         RecyclerView.Adapter<TransactionsAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
