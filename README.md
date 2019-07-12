@@ -1,4 +1,5 @@
 # Scalar Grin Android Wallet
+![Scalar Logo](https://github.com/grin-wallet/scalar/blob/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png)
 
 ## Table of Contents
 - [Scalar Grin Android Wallet](#Scalar-Grin-Android-Wallet)
