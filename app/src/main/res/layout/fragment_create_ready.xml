@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/colorAccent"
     android:paddingTop="@dimen/padding"
     tools:context=".ui.creation.CreateReadyFragment">
 
@@ -19,7 +18,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/wallet_ready_text"
-        style="@style/ActivityTitle" />
+        style="@style/TitleText" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -27,11 +26,11 @@
         android:text="@string/wallet_intro_text"
         style="@style/RegularTextView" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/nextButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/next"
-        style="@style/AlternatePrimaryButton" />
+        style="@style/PrimaryButton" />
 
 </LinearLayout>

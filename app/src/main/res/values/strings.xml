@@ -2,9 +2,10 @@
     <string name="app_name">Scalar</string>
 
     <!-- Login -->
-    <string name="create_wallet">Create New Wallet</string>
+    <string name="welcome">Welcome to\nScalar</string>
+    <string name="create_wallet">Create Wallet</string>
     <string name="import_wallet">Import Wallet</string>
-    <string name="description_wallet">A Simple Grin wallet for your enjoyment</string>
+    <string name="description_wallet">Send and receive Grin.\nThe easy way.</string>
 
     <!-- Create Account -->
     <string name="create_account_title">Grin Account Creation</string>
