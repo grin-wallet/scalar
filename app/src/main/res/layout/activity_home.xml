@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeActivity">
@@ -11,61 +10,86 @@
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/home_appbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        app:elevation="0dp">
 
-        <Toolbar
+        <com.google.android.material.appbar.CollapsingToolbarLayout
             android:id="@+id/home_toolbar"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/toolbar_height">
+            android:layout_height="match_parent"
+            android:background="@color/colorAccent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed" >
 
-            <RelativeLayout
+
+            <androidx.appcompat.widget.Toolbar
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="90dp"
+                app:layout_collapseMode="pin" />
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:contentDescription="@string/logo_description"
-                    android:src="@mipmap/ic_launcher" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:text="1230.34"
+                android:gravity="center"
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="1"
+                style="@style/WalletAmount" />
 
-            </RelativeLayout>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
 
-        </Toolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <LinearLayout
-        android:id="@+id/walletBalanceLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:layout_below="@+id/home_appbar">
+    <!--<LinearLayout-->
+        <!--android:id="@+id/walletBalanceLayout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="vertical"-->
+        <!--android:gravity="center"-->
+        <!--android:layout_below="@+id/home_appbar">-->
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="1230.34"
-            style="@style/WalletAmount"
-            android:layout_marginTop="@dimen/activity_vertical_margin" />
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="1230.34"-->
+            <!--style="@style/WalletAmount"-->
+            <!--android:layout_marginTop="@dimen/activity_vertical_margin" />-->
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="$3230.34 TODAY"
-            style="@style/RegularTextView"
-            android:layout_margin="0dp"/>
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="$3230.34 TODAY"-->
+            <!--style="@style/RegularTextView"-->
+            <!--android:layout_margin="0dp"/>-->
 
-    </LinearLayout>
+    <!--</LinearLayout>-->
 
-    <TextView
-        android:id="@+id/noTransactionsTextView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="@string/empty_transactions_list"
-        android:visibility="gone" />
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:gravity="center"-->
+        <!--app:layout_collapseMode="parallax">-->
+
+
+        <!--<TextView-->
+            <!--android:id="@+id/grinBalanceTextView"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="1230.34"-->
+            <!--style="@style/WalletAmount"-->
+            <!--android:layout_marginTop="@dimen/activity_vertical_margin" />-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="$3230.34 TODAY"-->
+            <!--style="@style/RegularTextView"-->
+            <!--android:layout_margin="0dp"-->
+            <!--android:layout_below="@+id/grinBalanceTextView"/>-->
+
+
+    <!--</RelativeLayout>-->
+
 
     <!--TODO: Add a Harry Potter themed sketch here, like reddit's style-->
     <!--<ImageView-->
@@ -75,9 +99,25 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/transactionsRecyclerView"
         android:layout_below="@+id/walletBalanceLayout"
-        android:layout_above="@+id/nav_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/logo_description"
+        app:layout_anchor="@id/home_appbar"
+        app:layout_anchorGravity="center|bottom"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/noTransactionsTextView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/empty_transactions_list"
+        android:visibility="gone" />
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -86,10 +126,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="0dp"
         android:layout_marginEnd="0dp"
-        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
         android:background="?android:attr/windowBackground"
         app:itemIconTint="@color/nav_icon_colors"
         app:itemTextColor="@color/nav_icon_colors"
         app:menu="@menu/bottom_nav_menu" />
 
-</RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
