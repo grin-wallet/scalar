@@ -1,0 +1,17 @@
+[package]
+name = "scalar-wallet"
+version = "0.0.1"
+authors = ["William Liu <yuxuanliu@live.ca>"]
+description = "Scalar Grin Android Wallet"
+publish = false
+edition = "2018"
+
+[dependencies]
+jni = { version = "0.10.2", default-features = false }
+
+[profile.release]
+lto = true
+
+[lib]
+name = "GrinWalletAndroidAPI"
+crate-type = ["cdylib"]
