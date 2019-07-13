@@ -26,75 +26,52 @@
                 android:layout_height="90dp"
                 app:layout_collapseMode="pin" />
 
-            <TextView
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_logo"
+                android:tint="@color/white"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/activity_vertical_margin"
+                app:layout_collapseMode="pin"
+                app:layout_collapseParallaxMultiplier="1" />
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="220dp"
-                android:text="1230.34"
-                android:gravity="center"
+                android:layout_height="260dp"
+                android:orientation="vertical"
                 app:layout_collapseMode="parallax"
-                app:layout_collapseParallaxMultiplier="1"
-                style="@style/WalletAmount" />
+                app:layout_collapseParallaxMultiplier="1" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Balance"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="90dp"
+                    android:textSize="18sp"
+                    android:textColor="@color/light_grey"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1230.34ツ"
+                    android:layout_gravity="center"
+                    style="@style/WalletBalance" />
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$2597.28"
+                    android:textSize="18sp"
+                    android:textColor="@color/light_grey"
+                    android:layout_gravity="center"/>
+
+            </LinearLayout>
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
-
-
     </com.google.android.material.appbar.AppBarLayout>
 
-    <!--<LinearLayout-->
-        <!--android:id="@+id/walletBalanceLayout"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:orientation="vertical"-->
-        <!--android:gravity="center"-->
-        <!--android:layout_below="@+id/home_appbar">-->
-
-        <!--<TextView-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="1230.34"-->
-            <!--style="@style/WalletAmount"-->
-            <!--android:layout_marginTop="@dimen/activity_vertical_margin" />-->
-
-        <!--<TextView-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="$3230.34 TODAY"-->
-            <!--style="@style/RegularTextView"-->
-            <!--android:layout_margin="0dp"/>-->
-
-    <!--</LinearLayout>-->
-
-    <!--<RelativeLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:gravity="center"-->
-        <!--app:layout_collapseMode="parallax">-->
-
-
-        <!--<TextView-->
-            <!--android:id="@+id/grinBalanceTextView"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="1230.34"-->
-            <!--style="@style/WalletAmount"-->
-            <!--android:layout_marginTop="@dimen/activity_vertical_margin" />-->
-
-        <!--<TextView-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="$3230.34 TODAY"-->
-            <!--style="@style/RegularTextView"-->
-            <!--android:layout_margin="0dp"-->
-            <!--android:layout_below="@+id/grinBalanceTextView"/>-->
-
-
-    <!--</RelativeLayout>-->
-
-
-    <!--TODO: Add a Harry Potter themed sketch here, like reddit's style-->
-    <!--<ImageView-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content" />-->
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/transactionsRecyclerView"
