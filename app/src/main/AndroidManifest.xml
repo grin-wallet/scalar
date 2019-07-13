@@ -16,6 +16,7 @@
         <activity android:name=".ui.importwallet.ImportActivity" />
         <activity android:name=".ui.creation.RecoveryPhraseActivity" />
         <activity android:name=".ui.creation.CreateAccountActivity" />
+        <activity android:name=".ui.creation.CreateAccountCredentialsActivity" />
         <activity android:name=".ui.activities.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -26,8 +26,12 @@
     <string name="wallet_intro_text">Gringotts, the wizard bank! Ain\'t no safer place. Not one. Except perhaps Hogwarts.\n\nHagrid said it best, so we\'ll leave it at that.</string>
     <string name="wallet_ready_text">Your wallet is ready</string>
 
+    <!-- Create Account Credentials -->
+    <string name="create_account_email_title">Email</string>'
+    <string name="create_account_password_title">Password</string>
+    <string name="create_account_create_button_text">Create Account</string>
 
-    <!-- Import Account-->
+    <!-- Import Account -->
     <string name="import_title">Enter your recovery phrase</string>
     <string name="explain_import_text">Please enter your 15 word recovery phrase to import your wallet.</string>
     <string name="import_text">Import</string>

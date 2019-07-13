@@ -13,7 +13,7 @@ class CreateAccountActivity : BaseActivity() {
         setContentView(R.layout.activity_create_account)
 
         createWalletButton.setOnClickListener {
-            startActivity(Intent(this, RecoveryPhraseActivity::class.java))
+            startActivity(Intent(this, CreateAccountCredentialsActivity::class.java))
         }
     }
 }
