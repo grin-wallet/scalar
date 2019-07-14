@@ -80,13 +80,40 @@
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
-    <ImageView
-        android:layout_width="wrap_content"
+    <!--<ImageView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:contentDescription="@string/logo_description"-->
+        <!--app:layout_anchor="@id/home_appbar"-->
+        <!--app:layout_anchorGravity="center|bottom"-->
+        <!--android:src="@mipmap/ic_launcher" />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:contentDescription="@string/logo_description"
+        android:orientation="horizontal"
         app:layout_anchor="@id/home_appbar"
         app:layout_anchorGravity="center|bottom"
-        android:src="@mipmap/ic_launcher" />
+        android:gravity="center" >
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/sendButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Send"
+            style="@style/ActionButton"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/receiveButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Receive"
+            style="@style/ActionButton"/>
+
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/noTransactionsTextView"
