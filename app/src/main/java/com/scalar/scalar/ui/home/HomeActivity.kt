@@ -1,5 +1,6 @@
 package com.scalar.scalar.ui.home
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -8,6 +9,7 @@ import com.scalar.scalar.R
 import com.scalar.scalar.adapters.TransactionsAdapter
 import com.scalar.scalar.models.TxnListViewModel
 import com.scalar.scalar.models.TransactionType
+import com.scalar.scalar.ui.receive.ReceiveActivity
 import kotlinx.android.synthetic.main.activity_home.*
 
 class HomeActivity : BaseActivity() {
@@ -43,6 +45,13 @@ class HomeActivity : BaseActivity() {
         transactionsRecyclerView.layoutManager = LinearLayoutManager(this)
         transactionsRecyclerView.adapter = TransactionsAdapter(getTransactions(), this)
 
+        sendButton.setOnClickListener {
+
+        }
+
+        receiveButton.setOnClickListener {
+            startActivity(Intent(this, ReceiveActivity::class.java))
+        }
     }
 
     private fun getTransactions() : ArrayList<TxnListViewModel> {
