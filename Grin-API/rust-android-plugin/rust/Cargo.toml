@@ -9,8 +9,17 @@ edition = "2018"
 [dependencies]
 jni = { version = "0.10.2", default-features = false }
 
+grin_wallet_api = { path = "../../mimblewimble/grin-wallet/api", version = "2.0.1-beta.1" }
+grin_wallet_impls = { path = "../../mimblewimble/grin-wallet/impls", version = "2.0.1-beta.1" }
+grin_wallet_libwallet = { path = "../../mimblewimble/grin-wallet/libwallet", version = "2.0.1-beta.1" }
+grin_wallet_config = { path = "../../mimblewimble/grin-wallet/config", version = "2.0.1-beta.1" }
+grin_wallet_util = { path = "../../mimblewimble/grin-wallet/util", version = "2.0.1-beta.1" }
+
 [profile.release]
 lto = true
+
+[build-dependencies]
+cc = "1.0"
 
 [lib]
 name = "GrinWalletAndroidAPI"
