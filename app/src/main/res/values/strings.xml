@@ -8,12 +8,9 @@
     <string name="description_wallet">Send and receive Grin.\nThe easy way.</string>
 
     <!-- Create Account -->
-    <string name="create_account_title">Grin Account Creation</string>
-    <string name="create_account_intro">We\'re so glad you are a believer of Grin. Electronic
-        transactions for all. Without censorship or restrictions.\n\nTo create a wallet, you will
-        generate a secret seed and a password. They will let you interact with the Grin blockchain.
-        \n\nNote we only temporarily store your wallet information, please make sure to back up your
-        wallet information.
+    <string name="create_account_title">Welcome to Scalar</string>
+    <string name="create_account_intro">You\'re on your way to private and censorship-less
+        electronic cash. Creating a Grin wallet takes 30 seconds on average.
     </string>
     <string name="recovery_phrase_title">Recovery Phrase</string>
     <string name="recovery_phrase_description">A recovery phrase is a series of 15 easy to remember

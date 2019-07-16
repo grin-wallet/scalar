@@ -32,6 +32,7 @@
         <item name="cornerRadius">10dp</item>
         <item name="strokeColor">@color/colorAccent</item>
         <item name="strokeWidth">2dp</item>
+        <item name="backgroundTint">@color/white</item>
     </style>
 
     <style name="ActionButton" parent="Widget.MaterialComponents.Button.UnelevatedButton">
@@ -51,8 +52,7 @@
         <item name="android:textSize">@dimen/title</item>
         <item name="android:font">@font/inter_bold</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:layout_marginRight">@dimen/margin</item>
-        <item name="android:layout_marginLeft">@dimen/margin</item>
+        <item name="android:layout_margin">@dimen/margin</item>
     </style>
 
     <style name="WalletBalance">
