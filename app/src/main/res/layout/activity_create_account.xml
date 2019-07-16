@@ -4,25 +4,37 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/colorAccent"
+    android:paddingBottom="48dp"
     tools:context=".ui.creation.CreateAccountActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/create_account_title"
-        style="@style/TitleText" />
+        style="@style/TitleText"
+        android:layout_gravity="center"
+        android:textColor="@color/white"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/create_account_intro"
+        android:textColor="@color/white"
+        android:gravity="center"
         style="@style/RegularTextView" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        android:layout_weight="1"/>
 
     <Button
         android:id="@+id/createWalletButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/ready"
-        style="@style/PrimaryButton" />
+        style="@style/AlternatePrimaryButton" />
 
 </LinearLayout>
