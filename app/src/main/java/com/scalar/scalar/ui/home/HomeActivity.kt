@@ -14,7 +14,7 @@ import kotlinx.android.synthetic.main.activity_home.*
 
 class HomeActivity : BaseActivity() {
 
-    lateinit var mTransactions : ArrayList<TxnListViewModel>
+    lateinit var mTransactions : ArrayList<Any>
 
     private val onNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
@@ -54,7 +54,7 @@ class HomeActivity : BaseActivity() {
         }
     }
 
-    private fun getTransactions() : ArrayList<TxnListViewModel> {
+    private fun getTransactions() : ArrayList<Any> {
         return if (this::mTransactions.isInitialized) {
             mTransactions
         } else {
@@ -63,13 +63,14 @@ class HomeActivity : BaseActivity() {
         }
     }
 
-    private fun loadData() : ArrayList<TxnListViewModel> {
+    private fun loadData() : ArrayList<Any> {
         // TODO: Make a call to Rust
-        val txns = arrayListOf<TxnListViewModel>()
+        val list = arrayListOf<Any>()
+        list.add("Transactions")
         for (i in 0..9) {
             val txn = TxnListViewModel(TransactionType.RECEIVED, "Sept 1, 2019", "21.00")
-            txns.add(txn)
+            list.add(txn)
         }
-        return txns
+        return list
     }
 }
