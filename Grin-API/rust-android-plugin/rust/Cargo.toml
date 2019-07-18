@@ -6,6 +6,9 @@ description = "Scalar Grin Android Wallet"
 publish = false
 edition = "2018"
 
+[build-dependencies]
+cc = "1.0"
+
 [dependencies]
 jni = { version = "0.10.2", default-features = false }
 
@@ -17,9 +20,6 @@ grin_wallet_util = { path = "../../mimblewimble/grin-wallet/util", version = "2.
 
 [profile.release]
 lto = true
-
-[build-dependencies]
-cc = "1.0"
 
 [lib]
 name = "GrinWalletAndroidAPI"

@@ -1783,6 +1783,7 @@ dependencies = [
 name = "scalar-wallet"
 version = "0.0.1"
 dependencies = [
+ "cc 1.0.37 (registry+https://github.com/rust-lang/crates.io-index)",
  "grin_wallet_api 2.0.1-beta.1",
  "grin_wallet_config 2.0.1-beta.1",
  "grin_wallet_impls 2.0.1-beta.1",
