@@ -56,7 +56,7 @@ class PinActivity : AppCompatActivity() {
         appContext = applicationContext
 
         pinLockView.setPinLockListener(object : OnPinLockCompleteListener() {
-            override fun onComplete(pin: String?) {
+            override fun onComplete(pin: String) {
                 if (PIN == null || PIN == pin) {
                     val intent = Intent()
                     intent.putExtra(INTENT_ARG_PIN, pin)
