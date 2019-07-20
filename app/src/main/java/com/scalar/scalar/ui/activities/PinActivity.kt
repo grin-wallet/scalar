@@ -31,14 +31,10 @@ class PinActivity : AppCompatActivity() {
         fun newInstance(context: Context, pin : String?): Intent {
             val intent = Intent(context, PinActivity::class.java)
             if (pin != null) {
-                if (pin.length == 4) {
-                    pin.toCharArray().forEach {
-                        if (!it.isDigit()) throw IllegalStateException("Character (Unicode code point) has to be a digit, found ='$it'.")
-                    }
-                    intent.putExtra(INTENT_ARG_PIN, pin)
-                } else {
-                    throw IllegalStateException("pin ahs to contain 4 characters, found = '${pin.length}")
+                pin.toCharArray().forEach {
+                    if (!it.isDigit()) throw IllegalStateException("Character (Unicode code point) has to be a digit, found ='$it'.")
                 }
+                intent.putExtra(INTENT_ARG_PIN, pin)
             }
             return intent
         }
@@ -69,8 +65,6 @@ class PinActivity : AppCompatActivity() {
         })
 
         pinLockView.attachIndicatorDots(indicatorDots)
-
-//        if (!intent.hasExtra(INTENT_ARG_MESSAGE)) throw IllegalStateException("missing argument {$INTENT_ARG_MESSAGE}, did you use #newInstance(..)?")
 
 //        PIN = intent.getStringExtra(INTENT_ARG_PIN)
     }
